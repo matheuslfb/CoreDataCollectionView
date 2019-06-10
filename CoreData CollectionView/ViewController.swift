@@ -23,11 +23,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        fetchData()
     }
     
-    private func fetchGames(){
-        
-    }
+    
 
     @IBAction func onTapped(){
         let game = Game(context: PersistenceService.context)
@@ -47,7 +46,7 @@ class ViewController: UIViewController {
     
     private func fetchData() {
         
-         let persistentContainer = PersistenceService.persistentContainer 
+         let persistentContainer = PersistenceService.persistentContainer
         let fetchRequest = NSFetchRequest<Game>(entityName: "\(Game.self)")
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         
