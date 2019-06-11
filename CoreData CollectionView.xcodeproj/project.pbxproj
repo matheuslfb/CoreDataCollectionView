@@ -18,6 +18,13 @@
 		8A4554DB22AEC12D009764DF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4554DA22AEC12D009764DF /* Game.swift */; };
 		8A4554DE22AEC3C3009764DF /* Game+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4554DC22AEC3C3009764DF /* Game+CoreDataClass.swift */; };
 		8A4554DF22AEC3C3009764DF /* Game+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4554DD22AEC3C3009764DF /* Game+CoreDataProperties.swift */; };
+		8A64C00D22B02A6B00CDD517 /* biohazard.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8A64C00622B02A6B00CDD517 /* biohazard.jpeg */; };
+		8A64C00E22B02A6B00CDD517 /* god of war ps4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8A64C00722B02A6B00CDD517 /* god of war ps4.jpeg */; };
+		8A64C00F22B02A6B00CDD517 /* star wars battlefront 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8A64C00822B02A6B00CDD517 /* star wars battlefront 2.jpeg */; };
+		8A64C01022B02A6B00CDD517 /* god of war 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A64C00922B02A6B00CDD517 /* god of war 2.png */; };
+		8A64C01122B02A6B00CDD517 /* minecraft.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8A64C00A22B02A6B00CDD517 /* minecraft.jpeg */; };
+		8A64C01222B02A6B00CDD517 /* star wars battlefront.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8A64C00B22B02A6B00CDD517 /* star wars battlefront.jpeg */; };
+		8A64C01322B02A6B00CDD517 /* shadow of the colossus.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8A64C00C22B02A6B00CDD517 /* shadow of the colossus.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,13 @@
 		8A4554DA22AEC12D009764DF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		8A4554DC22AEC3C3009764DF /* Game+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8A4554DD22AEC3C3009764DF /* Game+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8A64C00622B02A6B00CDD517 /* biohazard.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = biohazard.jpeg; sourceTree = "<group>"; };
+		8A64C00722B02A6B00CDD517 /* god of war ps4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "god of war ps4.jpeg"; sourceTree = "<group>"; };
+		8A64C00822B02A6B00CDD517 /* star wars battlefront 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "star wars battlefront 2.jpeg"; sourceTree = "<group>"; };
+		8A64C00922B02A6B00CDD517 /* god of war 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "god of war 2.png"; sourceTree = "<group>"; };
+		8A64C00A22B02A6B00CDD517 /* minecraft.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = minecraft.jpeg; sourceTree = "<group>"; };
+		8A64C00B22B02A6B00CDD517 /* star wars battlefront.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "star wars battlefront.jpeg"; sourceTree = "<group>"; };
+		8A64C00C22B02A6B00CDD517 /* shadow of the colossus.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shadow of the colossus.jpeg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +80,7 @@
 		8A4554B922AE837B009764DF /* CoreData CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				8A64C00522B02A5A00CDD517 /* Images */,
 				8A4554D922AEC112009764DF /* Model */,
 				8A4554BA22AE837B009764DF /* AppDelegate.swift */,
 				8A4554BC22AE837B009764DF /* ViewController.swift */,
@@ -88,6 +103,20 @@
 				8A4554DA22AEC12D009764DF /* Game.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8A64C00522B02A5A00CDD517 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8A64C00922B02A6B00CDD517 /* god of war 2.png */,
+				8A64C00722B02A6B00CDD517 /* god of war ps4.jpeg */,
+				8A64C00A22B02A6B00CDD517 /* minecraft.jpeg */,
+				8A64C00622B02A6B00CDD517 /* biohazard.jpeg */,
+				8A64C00C22B02A6B00CDD517 /* shadow of the colossus.jpeg */,
+				8A64C00822B02A6B00CDD517 /* star wars battlefront 2.jpeg */,
+				8A64C00B22B02A6B00CDD517 /* star wars battlefront.jpeg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +177,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A64C01222B02A6B00CDD517 /* star wars battlefront.jpeg in Resources */,
 				8A4554C822AE837C009764DF /* LaunchScreen.storyboard in Resources */,
+				8A64C01022B02A6B00CDD517 /* god of war 2.png in Resources */,
 				8A4554C522AE837C009764DF /* Assets.xcassets in Resources */,
+				8A64C01322B02A6B00CDD517 /* shadow of the colossus.jpeg in Resources */,
+				8A64C01122B02A6B00CDD517 /* minecraft.jpeg in Resources */,
+				8A64C00D22B02A6B00CDD517 /* biohazard.jpeg in Resources */,
 				8A4554C022AE837B009764DF /* Main.storyboard in Resources */,
+				8A64C00F22B02A6B00CDD517 /* star wars battlefront 2.jpeg in Resources */,
+				8A64C00E22B02A6B00CDD517 /* god of war ps4.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
