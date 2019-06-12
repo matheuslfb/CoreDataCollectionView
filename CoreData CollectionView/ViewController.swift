@@ -12,10 +12,6 @@ import CoreData
 
 class ViewController: UIViewController {
     
-    let items = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11","12", "13", "14", "15", "16", "17", "18", "19", "20","21","22", "23", "24", "25", "26", "27", "28"]
-    
-    let images = ["Ant", "Bear", "Brain", "Cat", "Croc", "Dinosaur_1", "Dog", "Dragon", "Fly", "Grandma", "Koala", "Monkey", "Mouse", "Ninja", "Panda_Paddle", "Pirahna", "RocketMouse", "Shark_Ship", "Snake", "Space_Marine", "Space_Monkey", "Space_Ship_1", "Space_Ship_2", "Space_Ship_3", "Wolf", "Yum_Fish","Zombie_2", "Zombie"]
-    
     var games: [Game] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -24,6 +20,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         fetchData()
+        
+        
     }
     
     
@@ -46,11 +44,11 @@ class ViewController: UIViewController {
     
     private func fetchData() {
         
-         let persistentContainer = PersistenceService.persistentContainer
+//         let persistentContainer = PersistenceService.persistentContainer
         let fetchRequest = NSFetchRequest<Game>(entityName: "\(Game.self)")
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         
-        guard let games = try? persistentContainer.viewContext.fetch(fetchRequest) else {return }
+        guard let games = try? PersistenceService.persistentContainer.viewContext.fetch(fetchRequest) else {return }
         
         self.games.append(contentsOf: games)
     }
@@ -58,6 +56,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UICollectionViewDataSource{
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return games.count
     }
@@ -75,6 +74,31 @@ extension ViewController: UICollectionViewDataSource{
         return cell
     }
     
+    
+    
    
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+         let game = games[indexPath.row]
+        var image = UIImage(data: (game.poster! as Data ))
+        
+        return image!.size
+//        return CGSize(width: collectionView.frame.width * 0.4, height: collectionView.frame.height * 0.6)
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 2.0
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+    }
+    
+    
 }
 
